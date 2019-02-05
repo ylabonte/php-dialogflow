@@ -1,0 +1,16 @@
+# PHP relevant stuff
+composer.phar
+/vendor/
+
+# Custom & Project relevant stuff
+.private/
+.htaccess
+info.php
+
+# Common
+.env
+.DS_Store
+
+# IDE
+.idea
+.project

@@ -1,0 +1,10 @@
+{
+    "require": {
+        "ext-curl": "^7.1",
+        "ext-json": "^1.5",
+        "google/cloud-dialogflow": "^0.3.5"
+    },
+    "require-dev": {
+        "symfony/dotenv": "^4.1"
+    }
+}

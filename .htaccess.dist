@@ -1,0 +1,18 @@
+RewriteEngine On
+
+# Fill in!!!
+# Supply your Google Project ID and path to the credentials file.
+SetEnv GOOGLE_PROJECT_ID [YOUR PROJECT ID]
+SetEnv GOOGLE_APPLICATION_CREDENTIALS [YOUR GOOGLE APPLICATION CREDENTIALS FILE PATH]
+# Optionally change the maximum nesting level of your custom payload objects.
+SetEnv FULFILLMENT_MESSAGE_MAX_NESTING 64
+# Optionally let the application set a CORS header.
+#SetEnv DIALOGFLOW_CORS *
+# Optionally beautify the JSON response body per default. Can also be done woth query param (`&pretty`).
+#PRETTY_OUTPUT 1
+
+RewriteRule ^lib(\.php)?$ - [F,L]
+RewriteRule vendor - [F,L]
+
+RewriteCond %{REQUEST_URI} !\.php$
+RewriteRule ^(.*)$ $1.php?%{QUERY_STRING} [L]
